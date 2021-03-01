@@ -18,6 +18,14 @@ const UseSchema = new mongoose.Schema({
         required: true,
         select: false, //Não mostra quando é feito a busca no banco
     },
+    passwordResetToken: {
+        type: String,
+        select: false,
+    },
+    passwordResetExpires: {
+        type: Date,
+        select: false,
+    },
     createdAt: {
         type: Date,
         default: Date.now,
